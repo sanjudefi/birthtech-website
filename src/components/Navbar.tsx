@@ -18,6 +18,7 @@ const navigation = [
       { name: "Platform", href: "/platform" },
     ],
   },
+  { name: "Products", href: "https://app.thebirthtech.com/products", external: true },
   { name: "About", href: "/about" },
   { name: "Impact", href: "/impact" },
   { name: "Partners", href: "/partners" },
@@ -76,6 +77,16 @@ export default function Navbar() {
                       </div>
                     )}
                   </div>
+                ) : item.external ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-navy rounded-md hover:bg-sky-light transition-colors"
+                  >
+                    {item.name}
+                  </a>
                 ) : (
                   <Link
                     key={item.name}
@@ -113,13 +124,25 @@ export default function Navbar() {
               <div className="flex flex-col gap-1">
                 {navigation.map((item) => (
                   <div key={item.name}>
-                    <Link
-                      href={item.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-navy hover:bg-sky-light rounded-lg transition-colors"
-                    >
-                      {item.name}
-                    </Link>
+                    {item.external ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setMobileOpen(false)}
+                        className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-navy hover:bg-sky-light rounded-lg transition-colors"
+                      >
+                        {item.name}
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-navy hover:bg-sky-light rounded-lg transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    )}
                     {item.children && (
                       <div className="pl-6">
                         {item.children.map((child) => (
