@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Heart,
@@ -227,8 +228,77 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Team */}
       <section className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-sm font-semibold text-teal uppercase tracking-widest mb-4">
+              Leadership
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+              Meet our team
+            </h2>
+            <p className="text-lg text-slate-500 max-w-2xl mx-auto">
+              A multidisciplinary founding team with deep experience in
+              engineering, product development, regulatory affairs, and
+              healthcare technology.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                name: "Veena Venu",
+                role: "Co-Founder & Chief Executive Officer",
+                photo: "/team/veena-venu.jpg",
+                bio: "Electronics Engineer with experience in startups, possessing extensive knowledge of product development and fundraising.",
+              },
+              {
+                name: "Sanjeeva Kumar Muddam",
+                role: "Co-Founder & CEO – Global Operations",
+                photo: "/team/sanjeeva-kumar.jpg",
+                bio: "Entrepreneur with 14 years of experience in C-level and managerial roles, specializing in product development and marketing.",
+              },
+              {
+                name: "Janice Joseph",
+                role: "Co-Founder & Chief of Regulatory Affairs & Public Relations",
+                photo: "/team/janice-joseph.jpg",
+                bio: "Experienced and passionate professional in Public and Regulatory Affairs within the healthcare sector, with extensive experience across various verticals.",
+              },
+              {
+                name: "Ramakrishna Kiran",
+                role: "Co-Founder & Chief Technology Officer",
+                photo: "/team/ramakrishna-kiran.jpg",
+                bio: "Expert in full stack development with over 10 years of experience, specializing in building end-to-end systems.",
+              },
+            ].map((member) => (
+              <div key={member.name} className="text-center">
+                <div className="w-36 h-36 rounded-full mx-auto mb-5 overflow-hidden bg-sky border-4 border-sky">
+                  <Image
+                    src={member.photo}
+                    alt={member.name}
+                    width={144}
+                    height={144}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="font-bold text-navy text-lg mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-teal text-sm font-semibold mb-3">
+                  {member.role}
+                </p>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  {member.bio}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="gradient-navy rounded-3xl p-10 md:p-16 text-white text-center relative overflow-hidden pattern-overlay">
             <div className="relative z-10">

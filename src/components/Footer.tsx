@@ -3,10 +3,11 @@ import Image from "next/image";
 import {
   Mail,
   MapPin,
-  Phone,
   Linkedin,
-  Twitter,
+  Instagram,
+  Facebook,
 } from "lucide-react";
+import { Twitter } from "lucide-react";
 
 const footerLinks = {
   solutions: [
@@ -14,16 +15,13 @@ const footerLinks = {
     { name: "BirthMithra", href: "/products" },
     { name: "MomSense Wearable", href: "/products" },
     { name: "Digital Platform", href: "/platform" },
+    { name: "Our Approach", href: "/approach" },
   ],
   company: [
     { name: "About Us", href: "/about" },
     { name: "Impact", href: "/impact" },
     { name: "Partners", href: "/partners" },
     { name: "Investors", href: "/investors" },
-  ],
-  resources: [
-    { name: "The Problem", href: "/problem" },
-    { name: "Our Ecosystem", href: "/solution" },
     { name: "Contact", href: "/contact" },
   ],
 };
@@ -51,18 +49,40 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/thebirthtech"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-navy transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://x.com/thebirthtech"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-navy transition-colors"
-                aria-label="Twitter"
+                aria-label="X (Twitter)"
               >
                 <Twitter className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/thebirthtech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-navy transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.facebook.com/thebirthtech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-navy transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -105,34 +125,48 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Offices */}
           <div>
             <h4 className="font-semibold text-sm tracking-wide uppercase mb-4 text-slate-300">
-              Contact
+              Offices
             </h4>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-teal mt-0.5 shrink-0" />
+            <div className="space-y-5">
+              <div>
+                <div className="flex items-start gap-2 mb-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-teal mt-0.5 shrink-0" />
+                  <span className="text-xs font-semibold text-slate-300 uppercase">
+                    Canada
+                  </span>
+                </div>
+                <p className="text-xs text-slate-400 leading-relaxed pl-5.5">
+                  BirthTech Innovations Inc<br />
+                  C/O Pycap, 15 Wellesley St W<br />
+                  Unit 201, Toronto, ON M4Y 0G7
+                </p>
+              </div>
+              <div>
+                <div className="flex items-start gap-2 mb-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-teal mt-0.5 shrink-0" />
+                  <span className="text-xs font-semibold text-slate-300 uppercase">
+                    India
+                  </span>
+                </div>
+                <p className="text-xs text-slate-400 leading-relaxed pl-5.5">
+                  BirthTech Innovations Pvt Ltd<br />
+                  H.No: 26-107, Venkat Ram Reddy Nagar<br />
+                  Chintal, Hyderabad, Telangana 500054
+                </p>
+              </div>
+              <div className="pt-2">
                 <a
-                  href="mailto:info@thebirthtech.com"
-                  className="text-sm text-slate-400 hover:text-teal-light transition-colors"
+                  href="mailto:ceo@thebirthtech.com"
+                  className="flex items-center gap-2 text-sm text-slate-400 hover:text-teal-light transition-colors"
                 >
-                  info@thebirthtech.com
+                  <Mail className="w-3.5 h-3.5 text-teal shrink-0" />
+                  ceo@thebirthtech.com
                 </a>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-teal mt-0.5 shrink-0" />
-                <span className="text-sm text-slate-400">
-                  +91-XXXX-XXXXXX
-                </span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-teal mt-0.5 shrink-0" />
-                <span className="text-sm text-slate-400">
-                  India
-                </span>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
 

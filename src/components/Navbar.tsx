@@ -13,6 +13,7 @@ const navigation = [
     href: "/solution",
     children: [
       { name: "Ecosystem Overview", href: "/solution" },
+      { name: "Our Approach", href: "/approach" },
       { name: "Products", href: "/products" },
       { name: "Platform", href: "/platform" },
     ],

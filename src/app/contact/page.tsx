@@ -3,13 +3,16 @@
 import {
   Mail,
   MapPin,
-  Phone,
   Building2,
   Stethoscope,
   Globe,
   TrendingUp,
   Send,
+  Linkedin,
+  Instagram,
+  Facebook,
 } from "lucide-react";
+import { Twitter } from "lucide-react";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -148,12 +151,8 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent text-slate-600"
                     >
                       <option value="">Select an option</option>
-                      <option value="hospital">
-                        Deploying BirthTech in our hospital
-                      </option>
-                      <option value="government">
-                        Government health program partnership
-                      </option>
+                      <option value="hospital">Deploying BirthTech in our hospital</option>
+                      <option value="government">Government health program partnership</option>
                       <option value="ngo">NGO / Foundation collaboration</option>
                       <option value="investment">Investment opportunity</option>
                       <option value="technology">Technology partnership</option>
@@ -180,7 +179,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 bg-navy text-white font-semibold rounded-lg hover:bg-navy-light transition-colors flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-8 py-3.5 btn-gradient font-semibold rounded-full flex items-center justify-center gap-2"
                   >
                     Send Message
                     <Send className="w-4 h-4" />
@@ -191,32 +190,57 @@ export default function ContactPage() {
 
             {/* Contact Info */}
             <div className="lg:col-span-2">
-              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200 mb-8">
+              {/* Email & Social */}
+              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200 mb-6">
                 <h3 className="text-lg font-bold text-navy mb-6">
                   Contact Information
                 </h3>
-                <div className="space-y-5">
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-sky flex items-center justify-center shrink-0">
-                      <Mail className="w-5 h-5 text-teal" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-navy">Email</p>
-                      <a
-                        href="mailto:info@thebirthtech.com"
-                        className="text-sm text-teal hover:text-teal-dark transition-colors"
-                      >
-                        info@thebirthtech.com
-                      </a>
-                    </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-sky flex items-center justify-center shrink-0">
+                    <Mail className="w-5 h-5 text-teal" />
                   </div>
+                  <div>
+                    <p className="text-sm font-semibold text-navy">Email</p>
+                    <a
+                      href="mailto:ceo@thebirthtech.com"
+                      className="text-sm text-teal hover:text-teal-dark transition-colors"
+                    >
+                      ceo@thebirthtech.com
+                    </a>
+                  </div>
+                </div>
+                <div className="mt-6 pt-5 border-t border-slate-200">
+                  <p className="text-sm font-semibold text-navy mb-3">Follow us</p>
+                  <div className="flex gap-3">
+                    {[
+                      { href: "https://www.linkedin.com/company/thebirthtech", label: "LinkedIn", Icon: Linkedin },
+                      { href: "https://x.com/thebirthtech", label: "X", Icon: Twitter },
+                      { href: "https://www.instagram.com/thebirthtech/", label: "Instagram", Icon: Instagram },
+                      { href: "https://www.facebook.com/thebirthtech", label: "Facebook", Icon: Facebook },
+                    ].map((s) => (
+                      <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-sky flex items-center justify-center hover:bg-navy hover:text-white transition-colors text-teal" aria-label={s.label}>
+                        <s.Icon className="w-4 h-4" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Offices */}
+              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200 mb-6">
+                <h3 className="text-lg font-bold text-navy mb-6">Our Offices</h3>
+                <div className="space-y-6">
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-lg bg-sky flex items-center justify-center shrink-0">
-                      <Phone className="w-5 h-5 text-teal" />
+                      <MapPin className="w-5 h-5 text-teal" />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-navy">Phone</p>
-                      <p className="text-sm text-slate-500">+91-XXXX-XXXXXX</p>
+                      <p className="text-sm font-semibold text-navy">Canada</p>
+                      <p className="text-sm text-slate-500 leading-relaxed">
+                        BirthTech Innovations Inc<br />
+                        C/O Pycap, 15 Wellesley St W<br />
+                        Unit 201, Toronto, ON M4Y 0G7, Canada
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -224,42 +248,29 @@ export default function ContactPage() {
                       <MapPin className="w-5 h-5 text-teal" />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-navy">
-                        Location
+                      <p className="text-sm font-semibold text-navy">India</p>
+                      <p className="text-sm text-slate-500 leading-relaxed">
+                        BirthTech Innovations Pvt Ltd<br />
+                        H.No: 26-107, Venkat Ram Reddy Nagar<br />
+                        Chintal P.O, HMT Township, Balanagar<br />
+                        Hyderabad, Telangana – 500054
                       </p>
-                      <p className="text-sm text-slate-500">India</p>
                     </div>
                   </div>
                 </div>
               </div>
 
+              {/* Reach Out */}
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-                <h3 className="text-lg font-bold text-navy mb-6">
-                  Reach out if you are
-                </h3>
+                <h3 className="text-lg font-bold text-navy mb-6">Reach out if you are</h3>
                 <div className="space-y-4">
                   {[
-                    {
-                      icon: Stethoscope,
-                      text: "A hospital or health system looking to improve maternal care",
-                    },
-                    {
-                      icon: Building2,
-                      text: "A government body running maternal health programs",
-                    },
-                    {
-                      icon: Globe,
-                      text: "An NGO or foundation focused on maternal & child health",
-                    },
-                    {
-                      icon: TrendingUp,
-                      text: "An investor interested in healthcare technology",
-                    },
+                    { icon: Stethoscope, text: "A hospital or health system looking to improve maternal care" },
+                    { icon: Building2, text: "A government body running maternal health programs" },
+                    { icon: Globe, text: "An NGO or foundation focused on maternal & child health" },
+                    { icon: TrendingUp, text: "An investor interested in healthcare technology" },
                   ].map((item) => (
-                    <div
-                      key={item.text}
-                      className="flex items-start gap-3 text-sm text-slate-600"
-                    >
+                    <div key={item.text} className="flex items-start gap-3 text-sm text-slate-600">
                       <item.icon className="w-4 h-4 text-teal shrink-0 mt-0.5" />
                       {item.text}
                     </div>
