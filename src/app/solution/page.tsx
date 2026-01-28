@@ -26,18 +26,18 @@ export default function SolutionPage() {
   return (
     <>
       {/* Hero */}
-      <section className="gradient-hero pattern-overlay text-white">
+      <section className="gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold text-teal-light uppercase tracking-widest mb-4">
+            <p className="text-sm font-semibold text-navy uppercase tracking-widest mb-4">
               Our Solution
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6 text-slate-900">
               One integrated ecosystem for
               <br />
-              <span className="text-teal-light">the entire maternal care journey</span>
+              <span className="gradient-text">the entire maternal care journey</span>
             </h1>
-            <p className="text-lg text-slate-300 leading-relaxed max-w-2xl">
+            <p className="text-lg text-slate-500 leading-relaxed max-w-2xl">
               BirthTech connects purpose-built medical devices with an
               intelligent digital platform — delivering continuous monitoring,
               real-time alerts, and data-driven care from pregnancy through

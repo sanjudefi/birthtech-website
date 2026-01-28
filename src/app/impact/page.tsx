@@ -25,18 +25,18 @@ export default function ImpactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="gradient-hero pattern-overlay text-white">
+      <section className="gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold text-teal-light uppercase tracking-widest mb-4">
+            <p className="text-sm font-semibold text-navy uppercase tracking-widest mb-4">
               Impact
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6 text-slate-900">
               Technology that
               <br />
-              <span className="text-teal-light">saves lives at scale</span>
+              <span className="gradient-text">saves lives at scale</span>
             </h1>
-            <p className="text-lg text-slate-300 leading-relaxed max-w-2xl">
+            <p className="text-lg text-slate-500 leading-relaxed max-w-2xl">
               Every component of the BirthTech ecosystem is designed to drive
               measurable improvement in maternal and neonatal outcomes — from
               individual patient safety to system-wide healthcare
@@ -181,7 +181,7 @@ export default function ImpactPage() {
       </section>
 
       {/* Impact Numbers */}
-      <section className="section-padding gradient-hero pattern-overlay text-white">
+      <section className="section-padding gradient-dark pattern-overlay text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

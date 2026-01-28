@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Mail,
   MapPin,
@@ -29,40 +30,36 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-navy text-white">
+    <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-9 h-9 rounded-lg bg-teal flex items-center justify-center">
-                <span className="text-white font-bold text-sm">BT</span>
-              </div>
-              <div>
-                <span className="font-bold text-lg tracking-tight">
-                  BirthTech
-                </span>
-                <span className="text-slate-400 text-xs ml-1 font-normal">
-                  Innovations
-                </span>
-              </div>
+            <div className="mb-5">
+              <Image
+                src="/logo.svg"
+                alt="BirthTech Innovations"
+                width={140}
+                height={40}
+                className="h-9 w-auto brightness-0 invert"
+              />
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed max-w-sm mb-6">
+            <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
               Building the infrastructure for safer maternal and neonatal healthcare.
               Devices, data, and intelligence — integrated to save lives at scale.
             </p>
             <div className="flex gap-3">
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-teal transition-colors"
+                className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-navy transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-teal transition-colors"
+                className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-navy transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="w-4 h-4" />

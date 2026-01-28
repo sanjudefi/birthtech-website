@@ -18,18 +18,18 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="gradient-hero pattern-overlay text-white">
+      <section className="gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold text-teal-light uppercase tracking-widest mb-4">
+            <p className="text-sm font-semibold text-navy uppercase tracking-widest mb-4">
               Contact
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6 text-slate-900">
               Let&apos;s build safer
               <br />
-              <span className="text-teal-light">maternal care together</span>
+              <span className="gradient-text">maternal care together</span>
             </h1>
-            <p className="text-lg text-slate-300 leading-relaxed max-w-2xl">
+            <p className="text-lg text-slate-500 leading-relaxed max-w-2xl">
               Whether you represent a hospital, government program, NGO,
               investment firm, or technology partner — we want to hear from you.
             </p>

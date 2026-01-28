@@ -70,7 +70,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
         <Navbar />
-        <main className="pt-18">{children}</main>
+        <main className="pt-[4.5rem]">{children}</main>
         <Footer />
       </body>
     </html>

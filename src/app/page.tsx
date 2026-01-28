@@ -18,34 +18,34 @@ export default function HomePage() {
   return (
     <>
       {/* ===== HERO SECTION ===== */}
-      <section className="gradient-hero pattern-overlay text-white relative overflow-hidden">
+      <section className="gradient-hero relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40 relative z-10">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-teal-light mb-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sky rounded-full text-sm font-medium text-navy mb-8">
               <Heart className="w-4 h-4" />
               Transforming Maternal Healthcare
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6 text-slate-900">
               Every Mother Deserves
               <br />
-              <span className="text-teal-light">Safe, Monitored Care</span>
+              <span className="gradient-text">Safe, Monitored Care</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl">
+            <p className="text-lg md:text-xl text-slate-500 leading-relaxed mb-10 max-w-2xl mx-auto">
               BirthTech builds integrated medical devices and a digital platform
               to make childbirth safer, smarter, and accessible — from pregnancy
               through postnatal care.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/solution"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-teal text-white font-semibold rounded-lg hover:bg-teal-dark transition-colors text-base"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 btn-gradient font-semibold rounded-full text-base"
               >
                 Explore Our Ecosystem
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 transition-colors text-base border border-white/20"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-navy font-semibold rounded-full hover:bg-slate-50 transition-colors text-base border border-navy/20"
               >
                 Partner With Us
               </Link>
@@ -53,7 +53,7 @@ export default function HomePage() {
           </div>
         </div>
         {/* Abstract decorative element */}
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-teal/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-navy/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-teal/5 rounded-full blur-3xl pointer-events-none" />
       </section>
 
@@ -197,7 +197,7 @@ export default function HomePage() {
           <div className="text-center">
             <Link
               href="/solution"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-navy text-white font-semibold rounded-lg hover:bg-navy-light transition-colors"
+              className="inline-flex items-center gap-2 px-7 py-3.5 btn-gradient font-semibold rounded-full"
             >
               Explore the Ecosystem
               <ArrowRight className="w-4 h-4" />
@@ -430,7 +430,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== IMPACT NUMBERS ===== */}
-      <section className="section-padding gradient-hero pattern-overlay text-white">
+      <section className="section-padding gradient-dark pattern-overlay text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-14">
             <p className="text-sm font-semibold text-teal-light uppercase tracking-widest mb-4">

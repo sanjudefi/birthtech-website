@@ -5,15 +5,15 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-  /* Brand Colors */
-  --color-navy: #0F2B46;
-  --color-navy-light: #1A3D5C;
-  --color-navy-dark: #091E33;
-  --color-teal: #0891B2;
-  --color-teal-light: #22D3EE;
-  --color-teal-dark: #0E7490;
-  --color-sky: #E0F2FE;
-  --color-sky-light: #F0F9FF;
+  /* Brand Colors — Purple / Pink palette */
+  --color-navy: #6D28D9;
+  --color-navy-light: #7C3AED;
+  --color-navy-dark: #5B21B6;
+  --color-teal: #EC4899;
+  --color-teal-light: #F472B6;
+  --color-teal-dark: #DB2777;
+  --color-sky: #F3E8FF;
+  --color-sky-light: #FAF5FF;
   --color-coral: #F97316;
   --color-coral-light: #FB923C;
   --color-slate-50: #F8FAFC;
@@ -47,28 +47,58 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Premium gradient backgrounds */
+/* ===== Gradient backgrounds ===== */
+
+/* Dark purple gradient — for CTA sections and dark panels */
 .gradient-navy {
-  background: linear-gradient(135deg, #0F2B46 0%, #1A3D5C 50%, #0E7490 100%);
+  background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #EC4899 100%);
 }
 
+/* Light hero gradient — soft lavender/pink for page headers */
 .gradient-hero {
-  background: linear-gradient(160deg, #0F2B46 0%, #1A3D5C 40%, #0891B2 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF5FF 40%, #F3E8FF 70%, #FCE7F3 100%);
 }
 
+/* Dark hero gradient — for stats sections and dark hero areas */
+.gradient-dark {
+  background: linear-gradient(160deg, #5B21B6 0%, #6D28D9 40%, #EC4899 100%);
+}
+
+/* Purple to pink button gradient */
 .gradient-teal {
-  background: linear-gradient(135deg, #0891B2 0%, #22D3EE 100%);
+  background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
 }
 
+/* Light section gradient */
 .gradient-light {
-  background: linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%);
+  background: linear-gradient(180deg, #FAF5FF 0%, #FFFFFF 100%);
 }
 
+/* Section accent gradient — light purple tint */
 .gradient-section {
-  background: linear-gradient(180deg, #F8FAFC 0%, #E0F2FE 50%, #F8FAFC 100%);
+  background: linear-gradient(180deg, #F8FAFC 0%, #F3E8FF 50%, #F8FAFC 100%);
 }
 
-/* Subtle pattern overlay for hero sections */
+/* Gradient text — purple to pink */
+.gradient-text {
+  background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient CTA button */
+.btn-gradient {
+  background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+  color: white;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.btn-gradient:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Subtle pattern overlay for dark sections */
 .pattern-overlay {
   position: relative;
 }
@@ -81,13 +111,18 @@ html {
   pointer-events: none;
 }
 
+/* Top gradient accent bar (nav) */
+.nav-gradient-bar {
+  background: linear-gradient(90deg, #7C3AED 0%, #EC4899 100%);
+}
+
 /* Card hover effects */
 .card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(15, 43, 70, 0.12);
+  box-shadow: 0 20px 40px rgba(109, 40, 217, 0.12);
 }
 
 /* Smooth fade-in animation */
