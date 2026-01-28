@@ -38,7 +38,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="mb-5">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="BirthTech Innovations"
                 width={140}
                 height={40}
