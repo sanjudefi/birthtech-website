@@ -1,0 +1,40 @@
+[
+  {
+    "name": "birthchair",
+    "mode": "Built-in image_gen",
+    "prompt": "Use case: ads-marketing. Create a premium photorealistic landscape website hero image, 1536x1024 or wider landscape. Input reference: actual BirthChair product design. Recreate the same purple upholstered birthing chair faithfully: segmented high back, small head cushion, armrests, rectangular padded seat, silver folding support structure, black foot support. Preserve product proportions and recognizable construction. Remove floating phone from reference. Place the chair in the RIGHT HALF of a serene modern maternity suite with sheer curtains, soft daylight, rounded pale lavender architectural alcove, subtle blush pink accents, elegant soft floor shadows. Hero art direction: refined Apple-like healthcare product campaign, tactile purple fabric, realistic brushed metal, calm and reassuring. LEFT 45 PERCENT must remain mostly empty off-white/lavender softly lit wall, for website headline overlay. Entire chair visible, not cropped, grounded on floor, upper-right focal point. Wide cinematic composition, premium editorial product photography. Colors white, pale lavender #FAF5FF, purple #7C3AED, subtle pink #EC4899. NO text, NO logos, NO invented certifications, NO watermarks, NO people. This is a hero visual, not a complete website screenshot.",
+    "references": [
+      "public/products/birthchair.png"
+    ],
+    "savedOriginal": "public/slides/birthchair-hero.png",
+    "webAsset": "public/slides/birthchair-hero.webp"
+  },
+  {
+    "name": "momsense",
+    "mode": "Built-in image_gen",
+    "prompt": "Use case: ads-marketing. Create a premium photorealistic landscape website hero image, 1536x1024 or wider landscape, for MomSense maternal and newborn wearable care. Reference image is only a visual guide for tender mother and baby relationship and simple dark wearable bands. Create a new natural lifestyle photograph: a South Asian mother fully clothed in a soft light lavender blouse tenderly cradling her fully clothed sleeping newborn in her arms on a cream sofa. One understated dark smart band on mother's wrist, one soft small band on baby's ankle. Only two bands. No large screens or medical readouts. Beautiful realistic skin, natural human hands, anatomically correct mother and baby, a candid peaceful moment, warm window daylight with soft lavender and blush shadows. Place mother and baby entirely in the RIGHT HALF, visible at medium portrait distance; LEFT 45 PERCENT is clear pale lavender interior wall for website headline overlay. Generous airy composition, restrained purple #7C3AED and pink #EC4899 accent fabrics, premium maternal wellness campaign, gentle emotional warmth. No text, no logos, no icons, no graphics, no watermark. Wide landscape, not a portrait poster.",
+    "references": [
+      "public/products/momsense.png"
+    ],
+    "savedOriginal": "public/slides/momsense-hero-v2.png",
+    "webAsset": "public/slides/momsense-hero-v2.webp",
+    "editPrompt": "Edit this existing MomSense website hero photograph. Keep the same wide landscape composition, mother and baby on right half, empty lavender wall on left, cream sofa, lilac blouse, blush cushions, soft daylight, two simple dark wearable bands: one on mother's wrist and one on baby's ankle. Change the subjects to a white Canadian mother with naturally light skin and medium-brown hair and her white newborn baby with naturally light skin. Represent an ordinary Canadian family in a modern home. Preserve tender cradling pose, realistic anatomy and hands, fully clothed baby, premium warm maternal wellness photography, authentic skin texture. No text, no logos, no watermark. Preserve the purple and pink palette. Landscape 1536x1024. Only change the family representation, keeping the overall campaign art direction consistent."
+  },
+  {
+    "name": "birthmithra",
+    "mode": "Built-in image_gen",
+    "prompt": "Use case: ads-marketing. Create a high-end photorealistic landscape website hero photograph, 1536x1024 or wider landscape, for BirthMithra accessible maternal care and birthing support. Scene: a bright welcoming small maternity clinic with natural daylight, white walls, a subtle lavender curtain, a small green plant. In the RIGHT HALF, a friendly South Asian female maternity nurse wearing neat lavender scrubs sits alongside a fully clothed expectant South Asian mother in a blush-pink maternity dress, reassuringly talking and listening. Mother seated comfortably in a simple chair, hands resting naturally near her belly, both relaxed and smiling softly. Show human connection and thoughtful care, not a delivery procedure. Keep real clinical equipment out of focus in background, no invented proprietary device, no surgical tools, no needles. LEFT 45 PERCENT is beautifully lit empty off-white wall with subtle lavender light falloff, clear for headline overlay. Calm dignified authentic healthcare editorial photography, sophisticated cream, lavender #FAF5FF, purple #7C3AED and blush pink palette matching BirthTech website. Natural skin texture, realistic hands and proportions, medium-wide cinematic composition, no text, no logos, no watermark. Landscape image, not a complete website mockup.",
+    "references": [],
+    "savedOriginal": "public/slides/birthmithra-hero-v2.png",
+    "webAsset": "public/slides/birthmithra-hero-v2.webp",
+    "editPrompt": "Edit this existing BirthMithra website hero photograph. Keep the same wide landscape composition, a mother and maternity nurse on the right half, clear pale lavender wall on left for headline text, bright welcoming clinic, pink dress on the expectant mother and lavender scrubs on nurse. Change the expectant mother to a Black Canadian woman with deep brown skin and natural textured dark hair, fully clothed, seated comfortably, hands near her pregnant belly. Keep the maternity nurse as an Indian woman with warm brown skin, wearing lavender scrubs, reassuringly listening and talking with the expectant mother. A natural, respectful and warmly diverse maternity-care scene in Canada. Keep authentic skin texture, realistic human hands and anatomy, gentle expressions, soft daylight, purple and pink palette, premium editorial healthcare photography. No flags or national stereotypes, no text, no logos, no watermarks, no delivery procedure. Keep empty left 45 percent. Landscape 1672x941 or similar."
+  },
+  {
+    "name": "skinpin",
+    "mode": "Built-in image_gen",
+    "prompt": "Use case: ads-marketing. Create a premium photorealistic landscape hero image, 1536x1024 or wider landscape, for SkinPIN AI, a personal skin photo journal and food observations app. In the RIGHT HALF of frame, a young adult South Asian woman with authentic natural skin texture, fully clothed in a soft lilac shirt, in a bright refined home vanity setting, holding a simple contemporary smartphone and calmly photographing her cheek. Three-quarter portrait, phone angled naturally, screen facing her, no visible interface or fabricated results. Subtle oval mirror in background, a small tasteful bowl of fresh berries on pale stone countertop to allude to everyday nutrition. Scene feels caring, personal, modern and optimistic, not clinical diagnosis or beauty perfection; retain subtle natural blemishes. LEFT 45 PERCENT clear warm white/pale lavender wall with gentle blush lighting for website headline overlay. Soft daylight, premium editorial wellness photography, palette cream, lavender #FAF5FF, purple #7C3AED and pink #EC4899. No text, logos, watermarks, floating interface elements, before-after comparisons, needles or medical claims. Wide landscape, not a complete website screenshot.",
+    "references": [],
+    "savedOriginal": "public/slides/skinpin-hero.png",
+    "webAsset": "public/slides/skinpin-hero.webp"
+  }
+]

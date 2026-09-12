@@ -13,6 +13,7 @@ import {
   Facebook,
 } from "lucide-react";
 import { Twitter } from "lucide-react";
+import SectionIcon from "@/components/SectionIcon";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -25,7 +26,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-navy uppercase tracking-widest mb-4">
-              Contact
+              <SectionIcon topic="contact" inline />Contact
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6 text-slate-900">
               Let&apos;s build safer
@@ -46,6 +47,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Form */}
             <div className="lg:col-span-3">
+              <SectionIcon topic="message" />
               <h2 className="text-2xl font-bold text-navy mb-2">
                 Send us a message
               </h2>
@@ -193,7 +195,7 @@ export default function ContactPage() {
               {/* Email & Social */}
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200 mb-6">
                 <h3 className="text-lg font-bold text-navy mb-6">
-                  Contact Information
+                  <SectionIcon topic="contact" inline />Contact Information
                 </h3>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-sky flex items-center justify-center shrink-0">

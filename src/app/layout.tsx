@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     template: "%s | BirthTech Innovations",
   },
   description:
-    "BirthTech Innovations builds integrated medical devices and digital platforms to make maternal and neonatal healthcare safer, smarter, and more accessible worldwide.",
+    "BirthTech develops birthing devices and apps to make maternal care comfortable and accessible. Explore BirthPro, BirthMithra, MomSense, Mother Care App, and SkinPIN.",
   keywords: [
     "maternal healthcare",
     "neonatal care",

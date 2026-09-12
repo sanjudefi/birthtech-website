@@ -1,0 +1,7 @@
+{
+  "mode": "Built-in image_gen",
+  "prompt": "Create a photorealistic premium healthcare campaign image for the BirthChair product page. Use the supplied purple BirthChair product photo as the exact chair-design reference: purple upholstered tall backrest, small head cushion, padded seat, dark armrests, brushed metal folding frame and black footrest. Wide landscape 1536x1024. Show a visibly pregnant white Canadian woman, fully clothed in a soft pale lilac maternity dress, seated comfortably in that chair, relaxed, in a bright modern Canadian maternity consultation room. A Black female clinician with deep brown skin in neat lavender scrubs stands beside her, listening warmly and holding a simple tablet angled away from camera. Respectful natural interaction, no birth procedure or exams, no exposed body. Show both people and most of the chair, spacious composition, realistic hands and pregnancy anatomy. Palette warm white, lavender #FAF5FF, purple #7C3AED and blush pink #EC4899 accents. Soft natural daylight, authentic skin texture, cinematic editorial healthcare photograph. No text, logos, badges, watermarks, clinical outcome claims, extra futuristic equipment or visible fabricated app screens.",
+  "reference": "public/products/birthchair.png",
+  "savedOriginal": "public/slides/birthchair-care.png",
+  "webAsset": "public/slides/birthchair-care.webp"
+}

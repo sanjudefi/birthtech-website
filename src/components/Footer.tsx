@@ -1,20 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Mail,
-  MapPin,
-  Linkedin,
-  Instagram,
-  Facebook,
-} from "lucide-react";
+import { Mail, MapPin, Linkedin, Instagram, Facebook } from "lucide-react";
 import { Twitter } from "lucide-react";
 
 const footerLinks = {
   solutions: [
-    { name: "BirthPro", href: "/products" },
-    { name: "BirthMithra", href: "/products" },
-    { name: "MomSense Wearable", href: "/products" },
-    { name: "Digital Platform", href: "/platform" },
+    { name: "BirthPro", href: "/products/birthpro" },
+    { name: "BirthMithra", href: "/products/birthmithra" },
+    { name: "MomSense Wearable", href: "/products/momsense" },
+    { name: "BirthChair", href: "/products/birthchair" },
+    { name: "Mother Care App", href: "/products/mothercare" },
+    { name: "SkinPIN", href: "/products/skinpin" },
     { name: "Our Approach", href: "/approach" },
   ],
   company: [
@@ -44,8 +40,9 @@ export default function Footer() {
               />
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
-              Building the infrastructure for safer maternal and neonatal healthcare.
-              Devices, data, and intelligence — integrated to save lives at scale.
+              Making the birthing process easy, comfortable, and safe.
+              Thoughtful devices and apps to support mothers, babies, and
+              everyday wellness.
             </p>
             <div className="flex gap-3">
               <a
@@ -139,7 +136,8 @@ export default function Footer() {
                   </span>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed pl-5.5">
-                  BirthTech Innovations Inc<br />
+                  BirthTech Innovations Inc
+                  <br />
                   C/O Pycap, 15 Wellesley St W<br />
                   Unit 201, Toronto, ON M4Y 0G7
                 </p>
@@ -152,8 +150,10 @@ export default function Footer() {
                   </span>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed pl-5.5">
-                  BirthTech Innovations Pvt Ltd<br />
-                  H.No: 26-107, Venkat Ram Reddy Nagar<br />
+                  BirthTech Innovations Pvt Ltd
+                  <br />
+                  H.No: 26-107, Venkat Ram Reddy Nagar
+                  <br />
                   Chintal, Hyderabad, Telangana 500054
                 </p>
               </div>
@@ -173,13 +173,20 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500">
-            &copy; {new Date().getFullYear()} BirthTech Innovations. All rights reserved.
+            &copy; {new Date().getFullYear()} BirthTech Innovations. All rights
+            reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+            <a
+              href="#"
+              className="text-xs text-slate-500 hover:text-slate-300 transition-colors"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+            <a
+              href="#"
+              className="text-xs text-slate-500 hover:text-slate-300 transition-colors"
+            >
               Terms of Service
             </a>
           </div>

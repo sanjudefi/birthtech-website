@@ -6,173 +6,58 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Problem", href: "/problem" },
-  {
-    name: "Solutions",
-    href: "/solution",
-    children: [
-      { name: "Ecosystem Overview", href: "/solution" },
-      { name: "Our Approach", href: "/approach" },
-      { name: "Products", href: "/products" },
-      { name: "Platform", href: "/platform" },
-    ],
-  },
-  { name: "Products", href: "https://app.thebirthtech.com/products", external: true },
-  { name: "About", href: "/about" },
-  { name: "Impact", href: "/impact" },
-  { name: "Partners", href: "/partners" },
-  { name: "Investors", href: "/investors" },
+  { name: "Products", href: "/products", children: [
+    { name: "All Products", href: "/products" },
+    { name: "BirthChair", href: "/products/birthchair" },
+    { name: "MomSense", href: "/products/momsense" },
+    { name: "BirthMithra", href: "/products/birthmithra" },
+    { name: "BirthPro", href: "/products/birthpro" },
+    { name: "SkinPIN AI", href: "/products/skinpin" },
+    { name: "Mother Care App", href: "/products/mothercare" },
+  ] },
+  { name: "Solutions", href: "/solution", children: [
+    { name: "Solutions overview", href: "/solution" },
+    { name: "The Problem", href: "/problem" },
+    { name: "Our Approach", href: "/approach" },
+    { name: "Our Apps", href: "/platform" },
+  ] },
+  { name: "About Us", href: "/about", children: [
+    { name: "About BirthTech", href: "/about" },
+    { name: "Our Impact", href: "/impact" },
+    { name: "Partners", href: "/partners" },
+    { name: "Investors", href: "/investors" },
+  ] },
+  { name: "Team", href: "/about#team" },
   { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Gradient accent bar */}
-      <div className="nav-gradient-bar h-1" />
-      <div className="bg-white/95 backdrop-blur-md border-b border-slate-200">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5">
-              <Image
-                src="/logo.png"
-                alt="BirthTech Innovations"
-                width={140}
-                height={40}
-                className="h-9 w-auto"
-                priority
-              />
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-1">
-              {navigation.map((item) =>
-                item.children ? (
-                  <div
-                    key={item.name}
-                    className="relative"
-                    onMouseEnter={() => setDropdownOpen(true)}
-                    onMouseLeave={() => setDropdownOpen(false)}
-                  >
-                    <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-600 hover:text-navy rounded-md hover:bg-sky-light transition-colors">
-                      {item.name}
-                      <ChevronDown className="w-3.5 h-3.5" />
-                    </button>
-                    {dropdownOpen && (
-                      <div className="absolute top-full left-0 mt-1 w-52 bg-white rounded-lg shadow-lg border border-slate-200 py-2">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="block px-4 py-2.5 text-sm text-slate-600 hover:text-navy hover:bg-sky-light transition-colors"
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : item.external ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-navy rounded-md hover:bg-sky-light transition-colors"
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-navy rounded-md hover:bg-sky-light transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                )
-              )}
-            </div>
-
-            {/* CTA Button */}
-            <div className="hidden lg:flex items-center gap-3">
-              <Link
-                href="/contact"
-                className="px-5 py-2.5 btn-gradient text-sm font-semibold rounded-full"
-              >
-                Get Started
-              </Link>
-            </div>
-
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-slate-600 hover:text-navy"
-            >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const close = () => { setMobileOpen(false); setOpenMenu(null); };
+  return <header className="fixed top-0 left-0 right-0 z-50">
+    <div className="nav-gradient-bar h-1" />
+    <div className="bg-white/95 backdrop-blur-md border-b border-slate-200">
+      <nav aria-label="Main navigation" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <Link href="/" aria-label="BirthTech home" onClick={close}><Image src="/logo.png" alt="BirthTech Innovations" width={140} height={40} className="h-9 w-auto" priority /></Link>
+          <div className="hidden lg:flex items-center gap-6" data-desktop-navigation>
+            {navigation.map(item => item.children ? <div key={item.name} className="relative" onMouseEnter={() => setOpenMenu(item.name)} onMouseLeave={() => setOpenMenu(null)} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setOpenMenu(null); }} onKeyDown={event => { if (event.key === "Escape") { setOpenMenu(null); event.currentTarget.querySelector('button')?.focus(); } }}>
+              <button aria-expanded={openMenu === item.name} aria-controls={`desktop-${item.name.replaceAll(' ', '-')}`} onClick={() => setOpenMenu(openMenu === item.name ? null : item.name)} className="flex items-center gap-1.5 py-3 text-sm font-medium text-slate-600 hover:text-navy">{item.name}<ChevronDown size={14} /></button>
+              {openMenu === item.name && <div id={`desktop-${item.name.replaceAll(' ', '-')}`} className="absolute top-full left-0 pt-2 w-56"><div className="max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-xl border border-slate-200 bg-white p-2 shadow-lg">
+                {item.children.map(child => <Link key={child.href} href={child.href} onClick={close} className="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-sky-light hover:text-navy">{child.name}</Link>)}
+              </div></div>}
+            </div> : <Link key={item.name} href={item.href} onClick={close} className="py-3 text-sm font-medium text-slate-600 hover:text-navy">{item.name}</Link>)}
           </div>
-
-          {/* Mobile Navigation */}
-          {mobileOpen && (
-            <div className="lg:hidden py-4 border-t border-slate-100">
-              <div className="flex flex-col gap-1">
-                {navigation.map((item) => (
-                  <div key={item.name}>
-                    {item.external ? (
-                      <a
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => setMobileOpen(false)}
-                        className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-navy hover:bg-sky-light rounded-lg transition-colors"
-                      >
-                        {item.name}
-                      </a>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-navy hover:bg-sky-light rounded-lg transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    )}
-                    {item.children && (
-                      <div className="pl-6">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="block px-4 py-2 text-sm text-slate-500 hover:text-navy hover:bg-sky-light rounded-lg transition-colors"
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-                <div className="px-4 pt-4">
-                  <Link
-                    href="/contact"
-                    onClick={() => setMobileOpen(false)}
-                    className="block w-full text-center px-5 py-3 btn-gradient font-semibold rounded-full"
-                  >
-                    Get Started
-                  </Link>
-                </div>
-              </div>
-            </div>
-          )}
-        </nav>
-      </div>
-    </header>
-  );
+          <button aria-label={mobileOpen ? "Close navigation" : "Open navigation"} aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden p-2 text-slate-600">{mobileOpen ? <X size={24} /> : <Menu size={24} />}</button>
+        </div>
+        {mobileOpen && <div id="mobile-navigation" className="lg:hidden max-h-[calc(100dvh-4.25rem)] overflow-y-auto border-t border-slate-100 py-4">
+          {navigation.map(item => item.children ? <details key={item.name} className="group border-b border-slate-100">
+            <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-4 font-medium text-slate-700">{item.name}<ChevronDown size={16} className="transition-transform group-open:rotate-180" /></summary>
+            <div className="pb-3 pl-4">{item.children.map(child => <Link key={child.href} href={child.href} onClick={close} className="block rounded-lg px-4 py-3 text-sm text-slate-600 hover:bg-sky-light">{child.name}</Link>)}</div>
+          </details> : <Link key={item.name} href={item.href} onClick={close} className="block rounded-lg px-4 py-4 font-medium text-slate-700 hover:bg-sky-light">{item.name}</Link>)}
+        </div>}
+      </nav>
+    </div>
+  </header>;
 }
