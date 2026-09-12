@@ -18,7 +18,7 @@ const navigation = [
       { name: "Platform", href: "/platform" },
     ],
   },
-  { name: "Products", href: "https://app.thebirthtech.com/products", external: true },
+  // { name: "Products", href: "https://app.thebirthtech.com/products", external: true },
   { name: "About", href: "/about" },
   { name: "Impact", href: "/impact" },
   { name: "Partners", href: "/partners" },
